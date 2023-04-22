@@ -1,2 +1,24 @@
-# IRIS_Rec23_211CS229_Ruby-On-Rails
-This is a website to implement a Carrer Development Module as a part of Recruitment Process for IRIS
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
