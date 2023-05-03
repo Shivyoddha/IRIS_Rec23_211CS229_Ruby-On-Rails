@@ -10,7 +10,7 @@
 7) Export CSV of the available data in different forms is implemented.
 8) POC's and Admin can sort and manage data very efficiently using the advanced admin portal.
 
-## List of PLanned Features :
+## List of Planned Features :
 1) A Resume Parser API can be added which will parse Resumes and save our time when number of users increase.
 2) A Video Recorder can be added which lets us record a small self intro and stores in db using active storage.
 3) Company view can be added wherein users can see the status of their applications and get to know if they are in or out.
@@ -24,7 +24,14 @@
 1) W3schools : https://www.w3schools.com/
 2) MDN Docs : https://developer.mozilla.org/en-US/
 3) Complete Guide to FlexBox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-grow
-4) Bootstrap Docs :
+4) Bootstrap Docs : https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+### Back-End
+1) Rails Guides : https://guides.rubyonrails.org/
+2) Ruby Gems : https://rubygems.org/
+3) ChatGPT ( for errors ) : https://chat.openai.com/
+4) Stack Overflow : https://stackoverflow.com/
+
 ## ScreenShots:
 ![image](https://user-images.githubusercontent.com/97729353/236004748-ef1e5887-13e6-4547-bb09-50adf7e2ed63.png)
 ![image](https://user-images.githubusercontent.com/97729353/236004889-d7ebc5d3-21d6-4c69-9fca-3af302cbeec8.png)
