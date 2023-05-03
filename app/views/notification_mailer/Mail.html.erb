@@ -1,0 +1,11 @@
+<p>Hi user,</p>
+<p>There is a new job opening posted in the CDC module of our website</p>
+<p><b>Company :</b> <%= @role.company.name%></p>
+<p><b>Role position :</b> <%= @role.title%></p>
+<p><b>Eligible branches:</b>
+<%@role.branches.each do |branch| %>
+<%= branch.name%>,
+<%end%>
+etc.
+</p>
+<p><b>Expected Stipend/Income :</b>  <%= @role.packstart%> - <%= @role.packend%></p>

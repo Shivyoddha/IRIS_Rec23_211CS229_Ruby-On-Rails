@@ -1,0 +1,134 @@
+<%= render 'partials/header'%>
+<%= stylesheet_link_tag 'index'%>
+<%= render 'partials/navbar1'%>
+<div class="containers" >
+  <div class="left" >
+    <div class="header" id="myHeader">
+    <center><h2>Companies Recruiting</h2></center>
+    </div>
+    <center><hr style="width:70%;"></center>
+
+    <% Company.all.each do |company|%>
+  <div class="carding">
+    <div class="card w-90">
+    <div class="card-body">
+      <h5 class="card-title"><%= company.name%></h5>
+      <p class="card-text"><%= company.shortnote%></p>
+       <%= button_tag "Learn More", type: "button", class: "btn btn-primary", data: { bs_toggle: "modal", bs_target:"#ani#{company.id}" }, id: "ani" %>
+    </div>
+  </div>
+</div>
+
+
+                            <!-- Button trigger modal -->
+                           <div id="ani<%= company.id%>" class="modal">
+
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h1 class="modal-title fs-5" id="staticBackdropLabel"> <b><%= company.name %></b></h1>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                     <%= company.description %>
+                                       </div>
+                                         <div class="modal-footer">
+                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                                         </div>
+
+                                     </div>
+                                   </div>
+                               </div>
+
+<%end%>
+
+
+
+  </div>
+  <div class="right">
+    <div class="header" id="myHeader">
+    <center><h2>Upcoming offers</h2></center>
+    </div>
+    <center><hr style="width:70%;"></center>
+
+<% Role.all.each do |role|%>
+<div class="carding">
+  <div class="card text-center">
+    <div class="card-header">
+      <%= role.company.name%>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= role.title%></h5>
+      <p class="card-text">
+        <%= role.description %>
+        <br>
+        <b>This role is applicable to
+        <%role.branches.each do |branch| %>
+        <%= branch.name%>,
+        <%end%>
+        branches only.</b></p>
+   <%= button_tag "Apply", type: "button", class: "btn btn-primary", data: { bs_toggle: "modal", bs_target:"#an#{role.id}" }, id: "ani" %>
+        <div id="an<%= role.id%>" class="modal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"> <b><%= role.title %></b></h1>
+                  <p class="modal-title " id="staticBackdropLabel" style="font-size: 110%;">@ <%= role.company.name%></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                  <%= form_with(model: @apply) do |form| %>
+                        <%= form.hidden_field :role_id, value: role.id %>
+                        <p class="card-text">
+                          <%= role.description %>
+                          <br>
+                          <b>This role is applicable to
+                          <%role.branches.each do |branch| %>
+                          <%= branch.name%>,
+                          <%end%>
+                          branches only.</b><br>
+<i>Are you sure you want to apply for this position?</i>
+                        </p>
+
+                    </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <%= form.submit 'Submit',class:"btn btn-primary"%>
+                      </div>
+
+                  </div>
+                  <%end%>
+                </div>
+            </div>
+
+    </div>
+    <div class="card-footer text-body-secondary">
+    Expected stipend/income :  <%= role.packstart%> - <%= role.packend%>
+    </div>
+  </div>
+</div>
+<%end%>
+
+  </div>
+</div>
+<%= render 'partials/footer'%>
+<script>
+  // Get the modals and buttons
+  var modal1 = document.getElementsByClass("modal");
+  var btn1 = document.getElementById("ani");
+  // Add event listeners to the buttons
+  btn1.addEventListener("click", function() {
+    modal1.style.display = "block";
+  });
+
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.addEventListener("click", function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  });
+</script>

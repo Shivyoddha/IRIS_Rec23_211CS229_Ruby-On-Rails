@@ -1,0 +1,112 @@
+.containers{
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
+  height:80vh;
+  max-height:100%;
+  gap:20px;
+}
+.left{
+  display:flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  height:100%;
+  max-height:100%;
+  border: 5px solid black;
+  border-radius:10px;
+  overflow-y: auto;
+  margin-left: 20px;
+  min-width:30%;
+  max-width:40%;
+}
+.right{
+  display:flex;
+  flex-direction: column;
+  flex: 80 1 auto;
+  height:100%;
+  max-height:100%;
+  margin-right: 20px;
+  overflow-y: auto;
+  border: 5px solid black;
+  border-radius:10px;
+  min-width:60%;
+  max-width:70%;
+}
+.right1{
+  display:flex;
+  flex-direction: column;
+  flex: 80 1 auto;
+  height:100%;
+  max-height:100%;
+  margin-right: 20px;
+    margin-left: 20px;
+  overflow-y: auto;
+  border: 5px solid black;
+  border-radius:10px;
+  min-width:90%;
+  max-width:95%;
+}
+.footers{
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  height:15vh;
+  width:100%;
+  max-width:100%;
+}
+.first{
+  display:flex;
+  flex: 1 1 auto;
+  width:100%;
+  max-width:100%;
+  justify-content: center;
+}
+.second{
+  display:flex;
+  flex: 1 1 auto;
+  width:100%;
+  max-width:100%;
+ justify-content: center;
+}
+.third{
+  display:flex;
+  flex: 1 1 auto;
+  width:100%;
+  max-width:100%;
+   justify-content: center;
+}
+.fourth{
+  display:flex;
+  flex: 1 1 auto;
+  width:100%;
+  max-width:100%;
+  justify-content: space-between;
+}
+.footer-heading{
+  padding-top:1px;
+  padding-left:8px;
+}
+
+.padd{
+  margin-right:20px;
+}
+.fourth-left{
+  margin-left:10%;
+}
+.fourth-right{
+  margin-right:10%;
+}
+.links{
+  text-decoration: none;
+  margin-left:4px;
+}
+.text{
+  margin-left:20px;
+}
+
+.carding{
+ dislay:block;
+  width:90%;
+  margin:0 auto;
+  padding-top:20px;
+}

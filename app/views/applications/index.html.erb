@@ -1,0 +1,91 @@
+<%= render 'partials/header'%>
+<%= stylesheet_link_tag 'index'%>
+<%= render 'partials/navbar1'%>
+<div class="containers" >
+
+  <div class="right1">
+  <div class="header" id="myHeader">
+  <br> <center> <hr style="width:70%;">
+  <h2>My Applications</h2></center>
+  </div>
+  <center><hr style="width:70%;"></center>
+
+<%@applications.each do |application|%>
+<div class="carding">
+  <div class="card text-center">
+    <div class="card-header">
+      <%= application.role.company.name%>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= application.role.title%></h5>
+      <p class="card-text">
+        <%= application.role.description %>
+        <br>
+        <b>This role is applicable to
+        <%application.role.branches.each do |branch| %>
+        <%= branch.name%>,
+        <%end%>
+        branches only.</b></p>
+   <%= button_tag "Show", type: "button", class: "btn btn-primary", data: { bs_toggle: "modal", bs_target:"#an#{application.role.id}" }, id: "ani" %>
+        <div id="an<%= application.role.id%>" class="modal">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel"> <b><%= application.role.title %></b></h1>
+                  <p class="modal-title " id="staticBackdropLabel" style="font-size: 110%;">@ <%= application.role.company.name%></p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                        <p class="card-text">
+                          <%= application.role.description %>
+                          <br>
+                          <b>This role is applicable to
+                          <%application.role.branches.each do |branch| %>
+                          <%= application.branch.name%>,
+                          <%end%>
+                          branches only.</b><br>
+<i>You have already applied for this position!</i>
+                        </p>
+
+                    </div>
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                      </div>
+
+                  </div>
+
+                </div>
+            </div>
+
+    </div>
+    <div class="card-footer text-body-secondary">
+    Expected stipend/income :  <%= application.role.packstart%> - <%= application.role.packend%>
+    </div>
+  </div>
+</div>
+<%end%>
+
+  </div>
+</div>
+<%= render 'partials/footer'%>
+<script>
+  // Get the modals and buttons
+  var modal1 = document.getElementsByClass("modal");
+  var btn1 = document.getElementById("ani");
+  // Add event listeners to the buttons
+  btn1.addEventListener("click", function() {
+    modal1.style.display = "block";
+  });
+
+
+  // Close the modal when the user clicks anywhere outside of it
+  window.addEventListener("click", function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+  });
+</script>

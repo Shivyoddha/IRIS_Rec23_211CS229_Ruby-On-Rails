@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  packstart: MyString
+  packend: MyString
+
+two:
+  packstart: MyString
+  packend: MyString

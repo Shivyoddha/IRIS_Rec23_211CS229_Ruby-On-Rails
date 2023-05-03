@@ -1,0 +1,37 @@
+<%= stylesheet_link_tag 'index'%>
+<div class="footers" >
+<br>
+  <div class="first" >
+  <%= image_tag 'logo.png' ,style:"height:50px;width:50px;margin-top:4px;"%><h1 class="footer-heading">CDC</h1>
+  </div>
+  <div class="second" >
+    <p>Come and get placed with one of the best placement co-ordinators!</p>
+  </div>
+
+  <div class="third" >
+    <% @user = User.find(current_user.id) %>
+    <% if @user.notification %>
+      <button class="btn btn-dark padd" >Already subscribed</button>
+    <% else %>
+        <%= button_to 'Get Notified',roles_usey_path(userid:@user.id),class:"btn btn-outline-dark padd"%>
+      <% @user.update_attribute(:notification, true) %>
+    <% end %>
+
+
+
+    <button class="btn btn-primary padd" >Contact Us</button>
+
+  </div><center>
+ <hr style="width:80%"></center>
+  <div class="fourth">
+ <div class="fourth-left">
+<span class="sidebar-footer-text">Made with <span ><i aria-hidden="true" class="bi bi-heart-fill" ></i></span> by <a href="https://www.github.com/shivyoddha" class="links"  target="_blank">Anish Kumbhar</a></span>
+ </div>
+ <div class="fourth-right">
+<a href="#" class="links">Teams</a>
+<a href="#" class="links">Privacy</a>
+<a href="#" class="links">Cookies</a>
+ </div>
+  </div>
+  <br>
+</div>
