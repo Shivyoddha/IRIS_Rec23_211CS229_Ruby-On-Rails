@@ -20,7 +20,7 @@
 1) The main bug in the code is that if a specific user has once applied for a particular role, he/she cannot apply for it again but its still accepts proposals after first try.
 
 ## References Used :
-## Front-End 
+### Front-End 
 1) W3schools : https://www.w3schools.com/
 2) MDN Docs : https://developer.mozilla.org/en-US/
 3) Complete Guide to FlexBox : https://css-tricks.com/snippets/css/a-guide-to-flexbox/#aa-flex-grow
