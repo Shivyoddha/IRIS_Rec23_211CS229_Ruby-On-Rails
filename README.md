@@ -1,3 +1,18 @@
+## Installation instructions to set up the project from scratch :
+1) Install Rails : https://railsinstaller.org/
+2) Install newest version of ruby : https://rubyinstaller.org/downloads/
+3) Install node.js, git & yarn.
+4) Once all these are install run :<b> gem install rails </b>in command prompt
+5) Clone the repository and opne the project in your local editor
+6) Now run : bundle install
+7) Run the server by running : rails s
+8) Open http://localhost:3000/ to see thee project in your browser.
+
+## Complete steps to run your project :
+1) If you have already installed rails then just clone the project.
+2) Open terminal in the project folder and run <b>rails s</b>.
+3) This will start your project at http://localhost:3000/
+
 ## Videos :
 
 ### 1) Login features :
