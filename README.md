@@ -1,4 +1,11 @@
+## Videos :
 
+1) Login features :
+https://user-images.githubusercontent.com/97729353/236398682-307db743-cadc-4d68-97ec-a63d606a0495.mp4
+
+2) Notification and booking features :
+
+3) Admin and POC features
 
 ## List of Implemented features :
 1) Login Features which authenticates users and POC and superadmin based on login.
