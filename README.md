@@ -1,3 +1,4 @@
+# CDC Web Portal : IRIS Recs Task
 ## Installation instructions to set up the project from scratch :
 1) Install Rails : https://railsinstaller.org/
 2) Install newest version of ruby : https://rubyinstaller.org/downloads/
