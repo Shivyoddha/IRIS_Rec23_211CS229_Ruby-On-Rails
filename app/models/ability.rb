@@ -20,6 +20,7 @@ user ||= User.new
             can :manage,Application,user:user
             can :read,Company,user:user
             can :edit,Company,user:user
+            can :read, Branch
             can :read, :dashboard
           end
 

@@ -17,7 +17,7 @@
               <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                 <center><h4>Log In</h4></center>
                   <p>Please login to your account</p>
-
+               <%= render "devise/shared/error_messages", resource: resource %>
                   <div class="form-outline mb-4">
                     <!-- <input type="email" id="form2Example11" class="form-control"
                       placeholder="Phone number or email address" />
